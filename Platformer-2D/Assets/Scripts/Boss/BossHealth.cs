@@ -34,9 +34,16 @@ public class BossHealth : MonoBehaviour
 		if (isInvulnerable)
 			return;
 		
-		currentHealth -= damage;
-		enemyHealthbar.showDamageNumbers(damage);
+		currentHealth -= damage; 
+		try {
+			enemyHealthbar.showDamageNumbers(damage);
+        }
+        catch
+        {
 
+        }
+        
+		
 		if (currentHealth <= 200)
 		{
 			GetComponent<Animator>().SetBool("IsEnraged", true);
@@ -51,8 +58,6 @@ public class BossHealth : MonoBehaviour
 
 	void Die()
 	{
-		
-		Destroy(bossHealthBar);
 		Instantiate(deathEffect, transform.position, Quaternion.identity);
 		Destroy(gameObject);
 	}

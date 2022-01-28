@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour
     public HealthBar healthBar;
 	public Slider xpBar;
 	public PlayerAttack playerDamage;
+	public XpBar xpNumbers;
 
     private void Start() {
 		health = fullHealth;
@@ -69,6 +70,7 @@ public class PlayerHealth : MonoBehaviour
     public void addExperience(int addXp)
     {
         xp += addXp;
+		xpNumbers.showXpNumbers(addXp);
 
         while(xp >= xpNeeded)
         {

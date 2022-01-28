@@ -17,15 +17,15 @@ public class MainMenuController : MonoBehaviour
         swordsman = Resources.Load("Prefabs/Player") as GameObject;
         archer = Resources.Load("Prefabs/Archer") as GameObject;
         if (isArcher)
-            Instantiate(archer, new Vector3(3, 2, 0), Quaternion.identity);
+            Instantiate(archer, playerSpawn.transform.position, playerSpawn.transform.rotation);
         else
-            Instantiate(swordsman, new Vector3(2, 1, 0), new Quaternion());
+            Instantiate(swordsman, playerSpawn.transform.position, playerSpawn.transform.rotation);
     }
 
     public void LoadNextLevel()
     {
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1, LoadSceneMode.Single);
-        playerSpawn = GameObject.Find("PlayerSpawnPoint");
+        playerSpawn = GameObject.FindGameObjectWithTag("PlayerSpawn");
     }
 
     public void QuitGame()

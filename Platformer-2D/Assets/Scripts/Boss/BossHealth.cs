@@ -10,6 +10,7 @@ public class BossHealth : MonoBehaviour
 	public int currentHealth;
 	public int XpAward;
 	public BossHealthBar bossHealthBar;
+	public EnemyHealthbar enemyHealthbar;
 	public Slider slider;
 
 	public GameObject deathEffect;
@@ -34,6 +35,7 @@ public class BossHealth : MonoBehaviour
 			return;
 		
 		currentHealth -= damage;
+		enemyHealthbar.showDamageNumbers(damage);
 
 		if (currentHealth <= 200)
 		{

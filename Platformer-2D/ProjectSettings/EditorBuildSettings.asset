@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Level 1.unity
     guid: 08891424d21e18446ace0976cfa76cd4
+  - enabled: 1
+    path: Assets/PauseMenu.unity
+    guid: bc80314f85604ee478b125022ca8425f
   - enabled: 0
     path: Assets/Janic.unity
     guid: c5c160dead078b445a599b8497bde2f4

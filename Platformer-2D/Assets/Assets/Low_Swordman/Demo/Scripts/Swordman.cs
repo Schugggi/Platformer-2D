@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Swordman : PlayerController
 {
@@ -17,8 +16,6 @@ public class Swordman : PlayerController
     private void Update()
     {
 
-
-
         checkInput();
 
         if (m_rigidbody.velocity.magnitude > 30)
@@ -34,7 +31,6 @@ public class Swordman : PlayerController
 
     public void checkInput()
     {
-
 
 
         if (Input.GetKeyDown(KeyCode.S))  //아래 버튼 눌렀을때. 

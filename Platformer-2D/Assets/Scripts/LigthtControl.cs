@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class LigthtControl : MonoBehaviour
 {
-    public Transform player;
-    public Light light;
+    [SerializeField] private Light light;
     private float transitionTime = 0.00f;
     private bool inCave;
     private float minLightIntensity = 0.00f;
     private float maxLightIntensity = 1.50f;
-
+    private int playerInt;
 
     // Start is called before the first frame update
     void Start()
     {
-        Physics2D.IgnoreCollision(player.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         RenderSettings.ambientLight = Color.black;
     }
 

@@ -10,19 +10,12 @@ public class TriggerPauseMenu : MonoBehaviour
         // Check if Escape Button got pressed
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("Escape gets recocniced");
-            // Look if game is not yet paused and start Pause Menu
-            if (!gameIsPaused)
-            {
+            // If Scene is not loaded open Pause Menu
+            if (!SceneManager.GetSceneByName("Pausemenu").isLoaded)
                 SceneManager.LoadSceneAsync("PauseMenu", LoadSceneMode.Additive);
-                //SceneManager.SetActiveScene(SceneManager.GetSceneByName("PauseMenu"));
-            }
-            // If Pause Menu is started and user presses Escape again, close Pause Menu
-            if (gameIsPaused)
-            {
+            // If Scene is loaded and User presses Escape again close Pause Menu
+            else
                 PauseMenu.Resume();
-            }
-            gameIsPaused = !gameIsPaused;
         }
     }
 }

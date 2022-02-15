@@ -709,9 +709,9 @@ GameObject:
   - component: {fileID: 7438896114196912392}
   - component: {fileID: 7438896114196912503}
   - component: {fileID: 7438896114196912502}
-  - component: {fileID: 7438896114196912393}
   - component: {fileID: 7438896114196912501}
   - component: {fileID: 3936897307263590056}
+  - component: {fileID: 5737446099029919459}
   m_Layer: 7
   m_Name: Archer
   m_TagString: Player
@@ -773,22 +773,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.003753662, y: 0.043790817}
   m_Size: {x: 0.32198334, y: 0.99671555}
   m_Direction: 0
---- !u!114 &7438896114196912393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7438896114196912500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a24302b96de191449f6432dee7367b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xp: 0
-  xpNeeded: 100
-  healthbar: {fileID: 0}
-  healingAmt: 30
 --- !u!114 &7438896114196912501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -822,6 +806,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5cb1ff31f31f2e4a878594b967b5108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5737446099029919459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7438896114196912500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b83103e50019254dbcc0e29674b0be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xp: 0
+  xpNeeded: 100
+  health: 100
+  deathEffect: {fileID: 0}
+  healthBar: {fileID: 0}
+  xpBar: {fileID: 0}
+  playerDamage: {fileID: 0}
+  xpNumbers: {fileID: 0}
 --- !u!1 &7438896114362401449
 GameObject:
   m_ObjectHideFlags: 0

@@ -292,17 +292,17 @@ PrefabInstance:
         type: 3}
       propertyPath: xpBar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2040432051}
     - target: {fileID: 4958451512470469582, guid: 58160db0e6c75f5438dcaae769fae12a,
         type: 3}
       propertyPath: healthBar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 964712089}
     - target: {fileID: 4958451512470469582, guid: 58160db0e6c75f5438dcaae769fae12a,
         type: 3}
       propertyPath: xpNumbers
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2040432050}
     - target: {fileID: 4958451512470469582, guid: 58160db0e6c75f5438dcaae769fae12a,
         type: 3}
       propertyPath: playerDamage
@@ -15866,6 +15866,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 706757382}
     m_Modifications:
+    - target: {fileID: 5737446099029919459, guid: df756bbab39d6984fb31373b4703858c,
+        type: 3}
+      propertyPath: xpBar
+      value: 
+      objectReference: {fileID: 2040432051}
+    - target: {fileID: 5737446099029919459, guid: df756bbab39d6984fb31373b4703858c,
+        type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 964712089}
+    - target: {fileID: 5737446099029919459, guid: df756bbab39d6984fb31373b4703858c,
+        type: 3}
+      propertyPath: xpNumbers
+      value: 
+      objectReference: {fileID: 2040432050}
+    - target: {fileID: 5737446099029919459, guid: df756bbab39d6984fb31373b4703858c,
+        type: 3}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 1755349173569476, guid: 18091921256b7f64fa90d04d17545109,
+        type: 3}
     - target: {fileID: 7438896112750544031, guid: df756bbab39d6984fb31373b4703858c,
         type: 3}
       propertyPath: m_Layer

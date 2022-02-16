@@ -14,4 +14,12 @@ public class PauseMenu : MonoBehaviour
         SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("PauseMenu"), UnloadSceneOptions.UnloadAllEmbeddedSceneObjects);
         Time.timeScale = 1f;
     }
+
+    public void SaveGame()
+    {
+        if(PlayerPrefs.GetInt("player") == 0)
+            GameObject.Find("Player").GetComponent<PlayerHealth>().SaveGame(); 
+        if(PlayerPrefs.GetInt("player") == 1)
+            GameObject.Find("Archer").GetComponent<PlayerHealth>().SaveGame();
+    }
 }

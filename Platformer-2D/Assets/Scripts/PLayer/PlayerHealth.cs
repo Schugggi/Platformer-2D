@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -72,7 +71,7 @@ public class PlayerHealth : MonoBehaviour
     {
         xp += addXp;
 		xpNumbers.showXpNumbers(addXp);
-		SaveGame();
+		//SaveGame();
 
         while(xp >= xpNeeded)
         {
@@ -93,7 +92,7 @@ public class PlayerHealth : MonoBehaviour
 		playerDamage.playerDamage += 5;
 	}
 
-    void SaveGame()
+    public void SaveGame()
     {
 		PlayerPrefs.SetInt("Player Health", fullHealth);
 		PlayerPrefs.SetInt("Player Level", level);
@@ -103,7 +102,7 @@ public class PlayerHealth : MonoBehaviour
 		Debug.Log("Saved Game!");
 	}
 
-	void LoadGame()
+	public void LoadGame()
 	{
 		if (PlayerPrefs.HasKey("Player XP"))
 		{

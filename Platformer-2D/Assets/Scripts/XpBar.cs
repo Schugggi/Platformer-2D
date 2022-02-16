@@ -28,6 +28,6 @@ public class XpBar : MonoBehaviour
     {
         xpNumbers.text = "+" + xp;
         xpNumbers.canvasRenderer.SetAlpha(1f);
-        xpNumbers.CrossFadeAlpha(0f, 1f, true);
+        xpNumbers.CrossFadeAlpha(0f, 2f, true);
     }
 }

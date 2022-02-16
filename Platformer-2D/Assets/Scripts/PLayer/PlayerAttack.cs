@@ -17,7 +17,7 @@ public class PlayerAttack : MonoBehaviour
 
             if (enemyHealth.currentHealth <= 0)
             {
-                playerXp.addExperience(enemyHealth.XpAward);
+                playerXp.addExperience(enemyHealth.XpAward);    
             }
         }
     }

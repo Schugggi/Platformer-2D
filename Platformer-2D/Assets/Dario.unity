@@ -7850,6 +7850,7 @@ MonoBehaviour:
   healthBar: {fileID: 1838408650}
   xpBar: {fileID: 1581067776}
   playerDamage: {fileID: 1681703277}
+  xpNumbers: {fileID: 0}
 --- !u!70 &1171930485
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -8284,6 +8285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Slider: {fileID: 1581067776}
   playerXp: {fileID: 1171930484}
+  xpNumbers: {fileID: 0}
 --- !u!114 &1581067776
 MonoBehaviour:
   m_ObjectHideFlags: 0

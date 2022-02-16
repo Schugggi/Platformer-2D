@@ -22,9 +22,10 @@ public class PlayerHealth : MonoBehaviour
     private void Start() {
 		health = fullHealth;
         healthBar.SetMaxHealth(fullHealth);
+		LoadGame();
     }
 
-	public void TakeDamage(int damage)
+    public void TakeDamage(int damage)
 	{
 		health -= damage;
         healthBar.SetHealth(health - damage);
@@ -71,11 +72,13 @@ public class PlayerHealth : MonoBehaviour
     {
         xp += addXp;
 		xpNumbers.showXpNumbers(addXp);
+		SaveGame();
 
         while(xp >= xpNeeded)
         {
 			xp -= xpNeeded;
 			addLevel();
+			
         }
     }
 
@@ -88,5 +91,29 @@ public class PlayerHealth : MonoBehaviour
 		healthBar.SetMaxHealth(fullHealth);
 		xpBar.maxValue = xpNeeded;
 		playerDamage.playerDamage += 5;
+	}
+
+    void SaveGame()
+    {
+		PlayerPrefs.SetInt("Player Health", fullHealth);
+		PlayerPrefs.SetInt("Player Level", level);
+		PlayerPrefs.SetInt("Player XP", xp);
+		PlayerPrefs.Save();
+
+		Debug.Log("Saved Game!");
+	}
+
+	void LoadGame()
+	{
+		if (PlayerPrefs.HasKey("Player XP"))
+		{
+			fullHealth = PlayerPrefs.GetInt("Player Health");
+			level = PlayerPrefs.GetInt("Player Level");
+			xp = PlayerPrefs.GetInt("Player XP");
+
+			Debug.Log("Game data loaded!");
+		}
+		else
+			Debug.Log("There is no save data!");
 	}
 }

@@ -115,4 +115,14 @@ public class PlayerHealth : MonoBehaviour
 		else
 			Debug.Log("There is no save data!");
 	}
+
+	public void ResetGame()
+    {
+		PlayerPrefs.SetInt("Player Health", 100);
+		PlayerPrefs.SetInt("Player Level", 0);
+		PlayerPrefs.SetInt("Player XP", 0);
+		PlayerPrefs.Save();
+
+		Debug.Log("Reset Game!");
+	}
 }

@@ -17,9 +17,27 @@ public class PauseMenu : MonoBehaviour
 
     public void SaveGame()
     {
-        if(PlayerPrefs.GetInt("player") == 0)
-            GameObject.Find("Player").GetComponent<PlayerHealth>().SaveGame(); 
-        if(PlayerPrefs.GetInt("player") == 1)
-            GameObject.Find("Archer").GetComponent<PlayerHealth>().SaveGame();
+        GetPlayer().GetComponent<PlayerHealth>().SaveGame();
+    }
+
+    public void LoadGame()
+    {
+        GetPlayer().GetComponent<PlayerHealth>().LoadGame();
+    }
+
+    public void ResetGame()
+    {
+        GetPlayer().GetComponent<PlayerHealth>().ResetGame();
+        SceneManager.LoadSceneAsync("Menu", LoadSceneMode.Single);
+    }
+
+    public static GameObject GetPlayer()
+    {
+        if (PlayerPrefs.GetInt("player") == 0)
+            return GameObject.Find("Player");
+        if (PlayerPrefs.GetInt("player") == 1)
+            return GameObject.Find("Archer");
+        else
+            return null;
     }
 }

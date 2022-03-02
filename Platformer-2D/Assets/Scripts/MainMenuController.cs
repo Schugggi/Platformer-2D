@@ -14,6 +14,7 @@ public class MainMenuController : MonoBehaviour
             PlayerPrefs.SetInt("player", 0);
         if (isArcher)
             PlayerPrefs.SetInt("player", 1);
+        PlayerPrefs.Save();
     }
     public void LoadNextLevel()
     {

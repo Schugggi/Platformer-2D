@@ -29,6 +29,7 @@ public class PauseMenu : MonoBehaviour
     {
         GetPlayer().GetComponent<PlayerHealth>().ResetGame();
         SceneManager.LoadSceneAsync("Menu", LoadSceneMode.Single);
+        PlayerPrefs.DeleteKey("player");
     }
 
     public static GameObject GetPlayer()

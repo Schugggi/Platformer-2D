@@ -11001,7 +11001,7 @@ GameObject:
   - component: {fileID: 1110126345}
   - component: {fileID: 1110126346}
   m_Layer: 0
-  m_Name: Background (2)
+  m_Name: Background2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11636,6 +11636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Slider: {fileID: 1487352308}
   playerXp: {fileID: 439862338}
+  xpNumbers: {fileID: 0}
 --- !u!114 &1487352308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12065,7 +12066,7 @@ GameObject:
   - component: {fileID: 1836990880}
   - component: {fileID: 1836990881}
   m_Layer: 0
-  m_Name: Background (1)
+  m_Name: Background1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12957,6 +12958,26 @@ PrefabInstance:
     - target: {fileID: 3281300706987356087, guid: c215c67dbf4a4684b8a89a4b8c6ebeb4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383329287475090654, guid: c215c67dbf4a4684b8a89a4b8c6ebeb4,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383329287475090654, guid: c215c67dbf4a4684b8a89a4b8c6ebeb4,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6892924170023838133, guid: c215c67dbf4a4684b8a89a4b8c6ebeb4,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6892924170023838133, guid: c215c67dbf4a4684b8a89a4b8c6ebeb4,
+        type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

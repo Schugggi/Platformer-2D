@@ -15,8 +15,10 @@ public class PLayerController : MonoBehaviour
     public LayerMask whatIsGround;
     private int extraJumps;
     public int extraJumpValue;
-    
-
+    private Inventory inventory;
+    private void Awake(){
+        inventory = new Inventory();
+    }
     private void Start() {
         Flip();
         rb = GetComponent<Rigidbody2D>();

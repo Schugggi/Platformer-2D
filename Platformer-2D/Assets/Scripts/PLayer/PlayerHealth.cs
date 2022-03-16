@@ -17,12 +17,27 @@ public class PlayerHealth : MonoBehaviour
 	public Slider xpBar;
 	public PlayerAttack playerDamage;
 	public XpBar xpNumbers;
-
+	[SerializeField] UI_Inventory uI_Inventory;
+	private Inventory inventory;
+	
     private void Start() {
 		health = fullHealth;
         healthBar.SetMaxHealth(fullHealth);
 		LoadGame();
+		inventory = new Inventory();
+		uI_Inventory.SetInventory(inventory);
+
+		ItemWorld.SpawnItemWorld(new Vector3(10, 20), new Items{itemType = Items.ItemType.Armor, amount = 1});
+		ItemWorld.SpawnItemWorld(new Vector3(30, 20), new Items{itemType = Items.ItemType.Sword, amount = 1});
+		ItemWorld.SpawnItemWorld(new Vector3(20, 20), new Items{itemType = Items.ItemType.Healthpotion, amount = 1});
     }
+	private void OnTriggerEnter2D(Collider2D other) {
+		ItemWorld itemWorld = other.GetComponent<ItemWorld>();
+		if(itemWorld != null){
+			inventory.AddItem(itemWorld.GetItem());
+			itemWorld.DestroySelf();
+		}
+	}
 
     public void TakeDamage(int damage)
 	{

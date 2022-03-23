@@ -11,7 +11,8 @@ public class PauseMenu : MonoBehaviour
     public static void Resume()
     {
         // Set Time to normal again and close Pause Menu
-        SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("PauseMenu"), UnloadSceneOptions.UnloadAllEmbeddedSceneObjects);
+        SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("PauseMenu"), 
+            UnloadSceneOptions.UnloadAllEmbeddedSceneObjects);
         Time.timeScale = 1f;
     }
 

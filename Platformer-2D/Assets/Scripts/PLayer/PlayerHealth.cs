@@ -27,9 +27,12 @@ public class PlayerHealth : MonoBehaviour
 		inventory = new Inventory();
 		uI_Inventory.SetInventory(inventory);
 
-		ItemWorld.SpawnItemWorld(new Vector3(10, 20), new Items{itemType = Items.ItemType.Armor, amount = 1});
-		ItemWorld.SpawnItemWorld(new Vector3(30, 20), new Items{itemType = Items.ItemType.Sword, amount = 1});
-		ItemWorld.SpawnItemWorld(new Vector3(20, 20), new Items{itemType = Items.ItemType.Healthpotion, amount = 1});
+		ItemWorld.SpawnItemWorld(new Vector3(45, 1), new Items{itemType = Items.ItemType.Armor, amount = 1});
+		ItemWorld.SpawnItemWorld(new Vector3(42, 1), new Items{itemType = Items.ItemType.Sword, amount = 1});
+		ItemWorld.SpawnItemWorld(new Vector3(49, 1), new Items{itemType = Items.ItemType.Healthpotion, amount = 1});
+		ItemWorld.SpawnItemWorld(new Vector3(49, 1), new Items{itemType = Items.ItemType.Healthpotion, amount = 1});
+		ItemWorld.SpawnItemWorld(new Vector3(49, 1), new Items{itemType = Items.ItemType.Healthpotion, amount = 1});
+		ItemWorld.SpawnItemWorld(new Vector3(49, 1), new Items{itemType = Items.ItemType.Healthpotion, amount = 1});
     }
 	private void OnTriggerEnter2D(Collider2D other) {
 		ItemWorld itemWorld = other.GetComponent<ItemWorld>();

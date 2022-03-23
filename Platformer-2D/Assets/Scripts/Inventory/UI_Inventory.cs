@@ -38,9 +38,9 @@ public class UI_Inventory : MonoBehaviour
             Image image = itemSlotRectTransform.Find("Item").GetComponent<Image>();
             image.sprite = items.GetSprite();
             x++;
-            if(x > 4){
+            if(x > 2){
                 x = 0;
-                y++;
+                y--;
             }
         }
     }
